@@ -3,14 +3,14 @@ using System.Text.Json;
 
 namespace TimeSplitter
 {
-    class Program
+    public static class Program
     {
         static void Main()
         {
             Console.WriteLine($"{GetTimeJson()}");
         }
 
-	static string GetCentralTimeZoneId()
+	public static string GetCentralTimeZoneId()
         {
             if (OperatingSystem.IsWindows())
                 return "Central Standard Time"; // Windows ID
@@ -20,18 +20,18 @@ namespace TimeSplitter
                 throw new PlatformNotSupportedException("Unsupported OS for time zone conversion.");
         }
 
-        static string GetTimeJson()
+        public static string GetTimeJson()
         {
             var utcNow = DateTime.UtcNow;
             var centralZone = TimeZoneInfo.FindSystemTimeZoneById(GetCentralTimeZoneId());
             var central = TimeZoneInfo.ConvertTimeFromUtc(utcNow, centralZone);
-
+            string zone = centralZone.IsDaylightSavingTime(central) ? "CDT" : "CST";
             var payload = new
             {
                 time = "splitter",
                 utc = utcNow,
                 central = central,
-                zone = centralZone.IsDaylightSavingTime(central) ? "CDT" : "CST",
+                zone = zone,
                 diff = utcNow - central
             };
 
