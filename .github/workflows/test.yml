@@ -20,8 +20,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore TimeSplitter.sln
 
-    - name: Build
-      run: dotnet build --no-restore --configuration Release
+    # - name: Build
+    # run: dotnet build --no-restore --configuration Release
 
     - name: Run tests
       run: dotnet test TimeSplitter.sln --configuration Release --verbosity normal

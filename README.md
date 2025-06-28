@@ -10,22 +10,13 @@ Why C# and dotnet? I inhereted a C# project at work and need to skill up on buil
 
 
 
-- Build and release with Github action, cut a tagged download
-- Consider a dockerizing, using a multistage docker build
-- Basic unit test, confirm output is JSON like, run tests local and on GH
+- Build and release with Github action, cut a tagged download, linux and windows
+- [x] Basic unit test, confirm output is JSON like, run tests local and on GH
 
-- Debug and run locally, understand errors
+- [x] Debug and run locally, understand errors
 - Understand dotnet compilation, executables, and binaries
-- Handle exceptions, arguements, and cross platform
 
 Core
-- print current time with "now" arguement
-- have a help and manual
+- print current time in json
 - cross platform
 
-Nice to have
-- Colored and nice console output
-- Pass UTC time and output current time
-- Set timezone
-- Unix time
-- Naive time
