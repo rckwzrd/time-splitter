@@ -5,6 +5,9 @@ on:
     tags:
       - 'v*'  # Triggers on tags like v1.0.0
 
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build and Upload
@@ -20,10 +23,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Publish Linux
-        run: dotnet publish -c Release -r linux-x64 --self-contained true -o ./publish/linux
+        run: dotnet publish -c Release -r linux-x64 --self-contained true
 
       - name: Publish Windows
-        run: dotnet publish -c Release -r win-x64 --self-contained true -o ./publish/windows
+        run: dotnet publish -c Release -r win-x64 --self-contained true
 
       - name: Zip Artifacts
         run: |
