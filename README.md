@@ -8,6 +8,7 @@ Why json? I want this console app to loosely follow the unix philosophy of simpl
 
 Why C# and dotnet? I inhereted a C# project at work and need to skill up on building and releasing in the dotnet ecosystem. By keeping the tool simple I can focus on figuring out how to build and release for Windows and Linux.
 
+The Windows and Linux builds are 40mb zipped, which is kind of hilarious. Different build commands in the release workflow probably need to be used.
 
 Some learning goals:
 - [x] Build and release with Github action, cut a tagged download, linux and windows
