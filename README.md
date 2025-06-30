@@ -9,14 +9,9 @@ Why json? I want this console app to loosely follow the unix philosophy of simpl
 Why C# and dotnet? I inhereted a C# project at work and need to skill up on building and releasing in the dotnet ecosystem. By keeping the tool simple I can focus on figuring out how to build and release for Windows and Linux.
 
 
-
-- Build and release with Github action, cut a tagged download, linux and windows
+Some learning goals:
+- [x] Build and release with Github action, cut a tagged download, linux and windows
 - [x] Basic unit test, confirm output is JSON like, run tests local and on GH
+- [x] Understand basics of dotnet compilation, executables, and binaries
 
-- [x] Debug and run locally, understand errors
-- Understand dotnet compilation, executables, and binaries
-
-Core
-- print current time in json
-- cross platform
 
